@@ -1,0 +1,27 @@
+{
+  "name": "writers_shared",
+  "version": "1.0.0",
+  "description": "Shared library between shared_be and shared_fe",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbyonivo/writers_shared.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gbyonivo/writers_shared/issues"
+  },
+  "homepage": "https://github.com/gbyonivo/writers_shared#readme",
+  "dependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1"
+  }
+}
