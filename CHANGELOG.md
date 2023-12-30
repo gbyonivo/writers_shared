@@ -1,5 +1,12 @@
 # writers_shared
 
+## 1.0.2
+
+### Patch Changes
+
+- ae8ecba: Building files
+- f7f77d6: Adding existing types
+
 ## 1.0.1
 
 ### Patch Changes
