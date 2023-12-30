@@ -20,11 +20,44 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
-  isOdd: () => isOdd
+  OPERATION_STATUS: () => OPERATION_STATUS,
+  POEM_STATUS: () => POEM_STATUS,
+  STANZA_STATUS: () => STANZA_STATUS,
+  USER_STATUS: () => USER_STATUS
 });
 module.exports = __toCommonJS(src_exports);
-var isOdd = (n) => n % 2 === 1;
+
+// src/types/poem.ts
+var POEM_STATUS = /* @__PURE__ */ ((POEM_STATUS2) => {
+  POEM_STATUS2["DELETED"] = "DELETED";
+  POEM_STATUS2["ACTIVE"] = "ACTIVE";
+  return POEM_STATUS2;
+})(POEM_STATUS || {});
+
+// src/types/operationStatus.ts
+var OPERATION_STATUS = /* @__PURE__ */ ((OPERATION_STATUS2) => {
+  OPERATION_STATUS2["SUCCESS"] = "SUCCESS";
+  return OPERATION_STATUS2;
+})(OPERATION_STATUS || {});
+
+// src/types/stanza.ts
+var STANZA_STATUS = /* @__PURE__ */ ((STANZA_STATUS2) => {
+  STANZA_STATUS2["DELETED"] = "DELETED";
+  STANZA_STATUS2["ACTIVE"] = "ACTIVE";
+  return STANZA_STATUS2;
+})(STANZA_STATUS || {});
+
+// src/types/user.ts
+var USER_STATUS = /* @__PURE__ */ ((USER_STATUS2) => {
+  USER_STATUS2["ACTIVE"] = "ACTIVE";
+  USER_STATUS2["SUSPENDED"] = "SUSPENDED";
+  USER_STATUS2["DELETED"] = "DELETED";
+  return USER_STATUS2;
+})(USER_STATUS || {});
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  isOdd
+  OPERATION_STATUS,
+  POEM_STATUS,
+  STANZA_STATUS,
+  USER_STATUS
 });
