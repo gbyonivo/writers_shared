@@ -1,5 +1,11 @@
 # writers_shared
 
+## 1.1.1
+
+### Patch Changes
+
+- 360eaa9: make createdAt and updatedAt optional
+
 ## 1.1.0
 
 ### Minor Changes
