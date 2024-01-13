@@ -6,7 +6,7 @@ export enum USER_STATUS {
 
 export interface User {
   id?: number;
-  title: string;
+  name: string;
   phone: string;
   email?: string;
   dob: string;
