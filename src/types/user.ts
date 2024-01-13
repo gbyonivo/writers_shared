@@ -11,6 +11,6 @@ export interface User {
   email?: string;
   dob: string;
   status: USER_STATUS;
-  createdAt: string;
-  updatedAt: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
