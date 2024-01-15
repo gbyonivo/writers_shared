@@ -14,3 +14,15 @@ export interface User {
   createdAt?: string;
   updatedAt?: string;
 }
+
+export interface UserValidationError {
+  email?: string;
+  dob?: string;
+  title?: string;
+  phone?: string;
+}
+
+export interface Errors<T> {
+  errors?: T;
+  hasError?: boolean;
+}
