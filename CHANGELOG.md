@@ -1,5 +1,11 @@
 # writers_shared
 
+## 1.1.2
+
+### Patch Changes
+
+- 6ad1fc4: Add user schema
+
 ## 1.1.1
 
 ### Patch Changes
