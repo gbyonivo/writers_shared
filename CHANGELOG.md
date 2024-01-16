@@ -1,5 +1,11 @@
 # writers_shared
 
+## 1.1.3
+
+### Patch Changes
+
+- f9fba2e: Add user errors
+
 ## 1.1.2
 
 ### Patch Changes
