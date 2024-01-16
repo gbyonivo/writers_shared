@@ -1,3 +1,5 @@
+import * as yup from 'yup';
+
 declare enum POEM_STATUS {
     DELETED = "DELETED",
     ACTIVE = "ACTIVE"
@@ -46,13 +48,33 @@ declare enum USER_STATUS {
 }
 interface User {
     id?: number;
-    title: string;
+    name: string;
     phone: string;
     email?: string;
     dob: string;
     status: USER_STATUS;
-    createdAt: string;
-    updatedAt: string;
+    createdAt?: string;
+    updatedAt?: string;
 }
 
-export { OPERATION_STATUS, POEM_STATUS, type PaginationInput, type Poem, STANZA_STATUS, type Stanza, USER_STATUS, type User };
+declare const USER_ERRORS: {
+    nameRequired: string;
+    emailRequired: string;
+    emailInvalid: string;
+    phoneRequired: string;
+    dobMax: string;
+    dobRequired: string;
+};
+declare const userSchema: yup.ObjectSchema<{
+    name: string;
+    email: string;
+    phone: string;
+    dob: Date;
+}, yup.AnyObject, {
+    name: undefined;
+    email: undefined;
+    phone: undefined;
+    dob: undefined;
+}, "">;
+
+export { OPERATION_STATUS, POEM_STATUS, type PaginationInput, type Poem, STANZA_STATUS, type Stanza, USER_ERRORS, USER_STATUS, type User, userSchema };

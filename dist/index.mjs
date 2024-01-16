@@ -25,9 +25,28 @@ var USER_STATUS = /* @__PURE__ */ ((USER_STATUS2) => {
   USER_STATUS2["DELETED"] = "DELETED";
   return USER_STATUS2;
 })(USER_STATUS || {});
+
+// src/validation/userSchema.ts
+import { object, string, date } from "yup";
+var USER_ERRORS = {
+  nameRequired: "Name is required",
+  emailRequired: "Email is required",
+  emailInvalid: "Email is invalid",
+  phoneRequired: "Phone is required",
+  dobMax: "Invalid date",
+  dobRequired: "Date of birth is required"
+};
+var userSchema = object({
+  name: string().required(USER_ERRORS.nameRequired),
+  email: string().required(USER_ERRORS.emailRequired).email(USER_ERRORS.emailInvalid),
+  phone: string().required(USER_ERRORS.phoneRequired),
+  dob: date().required(USER_ERRORS.dobRequired).max(/* @__PURE__ */ new Date(), USER_ERRORS.dobMax)
+});
 export {
   OPERATION_STATUS,
   POEM_STATUS,
   STANZA_STATUS,
-  USER_STATUS
+  USER_ERRORS,
+  USER_STATUS,
+  userSchema
 };

@@ -23,7 +23,9 @@ __export(src_exports, {
   OPERATION_STATUS: () => OPERATION_STATUS,
   POEM_STATUS: () => POEM_STATUS,
   STANZA_STATUS: () => STANZA_STATUS,
-  USER_STATUS: () => USER_STATUS
+  USER_ERRORS: () => USER_ERRORS,
+  USER_STATUS: () => USER_STATUS,
+  userSchema: () => userSchema
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -54,10 +56,29 @@ var USER_STATUS = /* @__PURE__ */ ((USER_STATUS2) => {
   USER_STATUS2["DELETED"] = "DELETED";
   return USER_STATUS2;
 })(USER_STATUS || {});
+
+// src/validation/userSchema.ts
+var import_yup = require("yup");
+var USER_ERRORS = {
+  nameRequired: "Name is required",
+  emailRequired: "Email is required",
+  emailInvalid: "Email is invalid",
+  phoneRequired: "Phone is required",
+  dobMax: "Invalid date",
+  dobRequired: "Date of birth is required"
+};
+var userSchema = (0, import_yup.object)({
+  name: (0, import_yup.string)().required(USER_ERRORS.nameRequired),
+  email: (0, import_yup.string)().required(USER_ERRORS.emailRequired).email(USER_ERRORS.emailInvalid),
+  phone: (0, import_yup.string)().required(USER_ERRORS.phoneRequired),
+  dob: (0, import_yup.date)().required(USER_ERRORS.dobRequired).max(/* @__PURE__ */ new Date(), USER_ERRORS.dobMax)
+});
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   OPERATION_STATUS,
   POEM_STATUS,
   STANZA_STATUS,
-  USER_STATUS
+  USER_ERRORS,
+  USER_STATUS,
+  userSchema
 });
