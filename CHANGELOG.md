@@ -1,5 +1,11 @@
 # writers_shared
 
+## 1.1.4
+
+### Patch Changes
+
+- 140a6af: Added dist
+
 ## 1.1.3
 
 ### Patch Changes
