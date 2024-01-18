@@ -1,5 +1,11 @@
 # writers_shared
 
+## 1.1.5
+
+### Patch Changes
+
+- 04f4b37: add username to User
+
 ## 1.1.4
 
 ### Patch Changes
