@@ -61,6 +61,7 @@ var USER_STATUS = /* @__PURE__ */ ((USER_STATUS2) => {
 var import_yup = require("yup");
 var USER_ERRORS = {
   nameRequired: "Name is required",
+  usernameRequired: "Username is required",
   emailRequired: "Email is required",
   emailInvalid: "Email is invalid",
   phoneRequired: "Phone is required",
@@ -69,8 +70,10 @@ var USER_ERRORS = {
 };
 var userSchema = (0, import_yup.object)({
   name: (0, import_yup.string)().required(USER_ERRORS.nameRequired),
+  username: (0, import_yup.string)().required(USER_ERRORS.usernameRequired),
   email: (0, import_yup.string)().required(USER_ERRORS.emailRequired).email(USER_ERRORS.emailInvalid),
   phone: (0, import_yup.string)().required(USER_ERRORS.phoneRequired),
+  // add dob to be only date
   dob: (0, import_yup.date)().required(USER_ERRORS.dobRequired).max(/* @__PURE__ */ new Date(), USER_ERRORS.dobMax)
 });
 // Annotate the CommonJS export names for ESM import in node:
