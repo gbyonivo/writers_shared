@@ -1,5 +1,11 @@
 # writers_shared
 
+## 1.1.6
+
+### Patch Changes
+
+- 0c8246f: dist files forgotten
+
 ## 1.1.5
 
 ### Patch Changes
