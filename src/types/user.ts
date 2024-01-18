@@ -7,22 +7,11 @@ export enum USER_STATUS {
 export interface User {
   id?: number;
   name: string;
+  username: string;
   phone: string;
   email?: string;
   dob: string;
   status: USER_STATUS;
   createdAt?: string;
   updatedAt?: string;
-}
-
-export interface UserValidationError {
-  email?: string;
-  dob?: string;
-  title?: string;
-  phone?: string;
-}
-
-export interface Errors<T> {
-  errors?: T;
-  hasError?: boolean;
 }
