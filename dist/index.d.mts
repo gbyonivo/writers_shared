@@ -49,6 +49,7 @@ declare enum USER_STATUS {
 interface User {
     id?: number;
     name: string;
+    username: string;
     phone: string;
     email?: string;
     dob: string;
@@ -59,6 +60,7 @@ interface User {
 
 declare const USER_ERRORS: {
     nameRequired: string;
+    usernameRequired: string;
     emailRequired: string;
     emailInvalid: string;
     phoneRequired: string;
@@ -67,11 +69,13 @@ declare const USER_ERRORS: {
 };
 declare const userSchema: yup.ObjectSchema<{
     name: string;
+    username: string;
     email: string;
     phone: string;
     dob: Date;
 }, yup.AnyObject, {
     name: undefined;
+    username: undefined;
     email: undefined;
     phone: undefined;
     dob: undefined;
