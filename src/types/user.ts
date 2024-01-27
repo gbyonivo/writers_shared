@@ -12,6 +12,8 @@ export interface User {
   email?: string;
   dob: string;
   status: USER_STATUS;
+  poemCount?: number;
+  stanzaCount?: number;
   createdAt?: string;
   updatedAt?: string;
 }

@@ -1,3 +1,5 @@
+import { User } from "./user";
+
 export enum POEM_STATUS {
   DELETED = "DELETED",
   ACTIVE = "ACTIVE",
@@ -11,4 +13,6 @@ export interface Poem {
   status: POEM_STATUS;
   createdAt: string;
   updatedAt: string;
+  user?: Partial<User>;
+  stanzaCount?: number;
 }
