@@ -1,5 +1,11 @@
 # writers_shared
 
+## 1.1.8
+
+### Patch Changes
+
+- c9b28c9: add firstStanza to poem
+
 ## 1.1.7
 
 ### Patch Changes
