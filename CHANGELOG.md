@@ -1,5 +1,11 @@
 # writers_shared
 
+## 1.1.7
+
+### Patch Changes
+
+- bed7f4f: Added info to each object
+
 ## 1.1.6
 
 ### Patch Changes
