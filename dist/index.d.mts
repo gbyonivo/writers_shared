@@ -1,5 +1,41 @@
 import * as yup from 'yup';
 
+declare enum USER_STATUS$1 {
+    ACTIVE = "ACTIVE",
+    SUSPENDED = "SUSPENDED",
+    DELETED = "DELETED"
+}
+interface User$1 {
+    id?: number;
+    name: string;
+    username: string;
+    phone: string;
+    email?: string;
+    dob: string;
+    status: USER_STATUS$1;
+    poemCount?: number;
+    stanzaCount?: number;
+    createdAt?: string;
+    updatedAt?: string;
+}
+
+declare enum STANZA_STATUS$1 {
+    DELETED = "DELETED",
+    ACTIVE = "ACTIVE"
+}
+interface Stanza$1 {
+    id?: number;
+    content: string;
+    userId: number;
+    user?: Partial<User$1>;
+    poemId?: number;
+    poemTitle?: string;
+    position?: number;
+    status: STANZA_STATUS$1;
+    createdAt: string;
+    updatedAt: string;
+}
+
 declare enum USER_STATUS {
     ACTIVE = "ACTIVE",
     SUSPENDED = "SUSPENDED",
@@ -33,6 +69,7 @@ interface Poem {
     updatedAt: string;
     user?: Partial<User>;
     stanzaCount?: number;
+    firstStanza?: Partial<Stanza$1>;
 }
 
 interface PaginationInput {

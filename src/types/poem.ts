@@ -1,3 +1,4 @@
+import { Stanza } from "../../dist";
 import { User } from "./user";
 
 export enum POEM_STATUS {
@@ -15,4 +16,5 @@ export interface Poem {
   updatedAt: string;
   user?: Partial<User>;
   stanzaCount?: number;
+  firstStanza?: Partial<Stanza>;
 }
