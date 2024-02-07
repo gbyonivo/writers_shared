@@ -18,4 +18,5 @@ export interface Poem {
   stanzaCount?: number;
   firstStanza?: Partial<Stanza>;
   likes?: number;
+  hasBeenLiked?: boolean;
 }

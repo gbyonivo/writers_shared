@@ -35,6 +35,7 @@ interface Stanza {
     createdAt: string;
     updatedAt: string;
     rating?: number;
+    averageRating?: number;
 }
 
 declare enum POEM_STATUS {
@@ -53,6 +54,7 @@ interface Poem {
     stanzaCount?: number;
     firstStanza?: Partial<Stanza>;
     likes?: number;
+    hasBeenLiked?: boolean;
 }
 
 interface PaginationInput {
