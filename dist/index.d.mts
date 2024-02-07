@@ -1,41 +1,5 @@
 import * as yup from 'yup';
 
-declare enum USER_STATUS$1 {
-    ACTIVE = "ACTIVE",
-    SUSPENDED = "SUSPENDED",
-    DELETED = "DELETED"
-}
-interface User$1 {
-    id?: number;
-    name: string;
-    username: string;
-    phone: string;
-    email?: string;
-    dob: string;
-    status: USER_STATUS$1;
-    poemCount?: number;
-    stanzaCount?: number;
-    createdAt?: string;
-    updatedAt?: string;
-}
-
-declare enum STANZA_STATUS$1 {
-    DELETED = "DELETED",
-    ACTIVE = "ACTIVE"
-}
-interface Stanza$1 {
-    id?: number;
-    content: string;
-    userId: number;
-    user?: Partial<User$1>;
-    poemId?: number;
-    poemTitle?: string;
-    position?: number;
-    status: STANZA_STATUS$1;
-    createdAt: string;
-    updatedAt: string;
-}
-
 declare enum USER_STATUS {
     ACTIVE = "ACTIVE",
     SUSPENDED = "SUSPENDED",
@@ -55,36 +19,6 @@ interface User {
     updatedAt?: string;
 }
 
-declare enum POEM_STATUS {
-    DELETED = "DELETED",
-    ACTIVE = "ACTIVE"
-}
-interface Poem {
-    id?: number;
-    title: string;
-    userId: number;
-    stanzaLength?: number;
-    status: POEM_STATUS;
-    createdAt: string;
-    updatedAt: string;
-    user?: Partial<User>;
-    stanzaCount?: number;
-    firstStanza?: Partial<Stanza$1>;
-    likes?: number;
-}
-
-interface PaginationInput {
-    first: number;
-    before: string;
-    after: string;
-    userId: number;
-    peomId: number;
-}
-
-declare enum OPERATION_STATUS {
-    SUCCESS = "SUCCESS"
-}
-
 declare enum STANZA_STATUS {
     DELETED = "DELETED",
     ACTIVE = "ACTIVE"
@@ -101,6 +35,36 @@ interface Stanza {
     createdAt: string;
     updatedAt: string;
     rating?: number;
+}
+
+declare enum POEM_STATUS {
+    DELETED = "DELETED",
+    ACTIVE = "ACTIVE"
+}
+interface Poem {
+    id?: number;
+    title: string;
+    userId: number;
+    stanzaLength?: number;
+    status: POEM_STATUS;
+    createdAt: string;
+    updatedAt: string;
+    user?: Partial<User>;
+    stanzaCount?: number;
+    firstStanza?: Partial<Stanza>;
+    likes?: number;
+}
+
+interface PaginationInput {
+    first: number;
+    before: string;
+    after: string;
+    userId: number;
+    peomId: number;
+}
+
+declare enum OPERATION_STATUS {
+    SUCCESS = "SUCCESS"
 }
 
 declare const USER_ERRORS: {
