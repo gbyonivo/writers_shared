@@ -1,4 +1,4 @@
-import { Stanza } from "../../dist";
+import { Stanza } from "./stanza";
 import { User } from "./user";
 
 export enum POEM_STATUS {
