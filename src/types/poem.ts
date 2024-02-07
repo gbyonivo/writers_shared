@@ -17,4 +17,5 @@ export interface Poem {
   user?: Partial<User>;
   stanzaCount?: number;
   firstStanza?: Partial<Stanza>;
+  likes?: number;
 }

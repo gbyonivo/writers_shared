@@ -70,6 +70,7 @@ interface Poem {
     user?: Partial<User>;
     stanzaCount?: number;
     firstStanza?: Partial<Stanza$1>;
+    likes?: number;
 }
 
 interface PaginationInput {
@@ -99,6 +100,7 @@ interface Stanza {
     status: STANZA_STATUS;
     createdAt: string;
     updatedAt: string;
+    rating?: number;
 }
 
 declare const USER_ERRORS: {
