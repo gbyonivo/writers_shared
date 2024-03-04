@@ -36,6 +36,7 @@ interface Stanza {
     updatedAt: string;
     rating?: number;
     averageRating?: number;
+    stanzaId?: number;
 }
 
 declare enum POEM_STATUS {
