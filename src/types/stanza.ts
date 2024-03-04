@@ -18,6 +18,7 @@ export interface Stanza {
   updatedAt: string;
   rating?: number;
   averageRating?: number;
+  stanzaId?: number;
 }
 
 export interface StanzaWhere {
