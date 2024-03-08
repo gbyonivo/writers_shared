@@ -17,7 +17,8 @@ export interface Stanza {
   createdAt: string;
   updatedAt: string;
   rating?: number;
-  averageRating?: number;
+  userRating?: number;
+  numberOfRatings?: number;
   stanzaId?: number;
 }
 
