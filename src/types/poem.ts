@@ -1,3 +1,4 @@
+import { CommonGenre } from "./genre";
 import { Stanza } from "./stanza";
 import { User } from "./user";
 
@@ -12,6 +13,7 @@ export interface Poem {
   userId: number;
   stanzaLength?: number;
   status: PoemStatus;
+  genre: CommonGenre;
   createdAt: string;
   updatedAt: string;
   user?: Partial<User>;
