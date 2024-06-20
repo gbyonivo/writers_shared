@@ -1,6 +1,18 @@
 import * as yup from 'yup';
 
-declare enum USER_STATUS {
+declare enum CommonGenre {
+    THRILLER = "THRILLER",
+    COMEDY = "COMEDY",
+    ROMANCE = "ROMANCE",
+    FICTION = "FICTION",
+    KIDS = "KIDS",
+    HORROR = "HORROR",
+    DRAMA = "DRAMA",
+    FOLKLORE = "FOLKLORE",
+    OTHERS = "OTHERS"
+}
+
+declare enum UserStatus {
     ACTIVE = "ACTIVE",
     SUSPENDED = "SUSPENDED",
     DELETED = "DELETED"
@@ -12,14 +24,14 @@ interface User {
     phone: string;
     email?: string;
     dob: string;
-    status: USER_STATUS;
+    status: UserStatus;
     poemCount?: number;
     stanzaCount?: number;
     createdAt?: string;
     updatedAt?: string;
 }
 
-declare enum STANZA_STATUS {
+declare enum StanzaStatus {
     DELETED = "DELETED",
     ACTIVE = "ACTIVE"
 }
@@ -30,8 +42,9 @@ interface Stanza {
     user?: Partial<User>;
     poemId?: number;
     poemTitle?: string;
+    genre: CommonGenre;
     position?: number;
-    status: STANZA_STATUS;
+    status: StanzaStatus;
     createdAt: string;
     updatedAt: string;
     rating?: number;
@@ -40,7 +53,7 @@ interface Stanza {
     stanzaId?: number;
 }
 
-declare enum POEM_STATUS {
+declare enum PoemStatus {
     DELETED = "DELETED",
     ACTIVE = "ACTIVE"
 }
@@ -49,7 +62,8 @@ interface Poem {
     title: string;
     userId: number;
     stanzaLength?: number;
-    status: POEM_STATUS;
+    status: PoemStatus;
+    genre: CommonGenre;
     createdAt: string;
     updatedAt: string;
     user?: Partial<User>;
@@ -65,9 +79,10 @@ interface PaginationInput {
     after: string;
     userId: number;
     peomId: number;
+    searchValue: string;
 }
 
-declare enum OPERATION_STATUS {
+declare enum OperationStatus {
     SUCCESS = "SUCCESS"
 }
 
@@ -94,4 +109,4 @@ declare const userSchema: yup.ObjectSchema<{
     dob: undefined;
 }, "">;
 
-export { OPERATION_STATUS, POEM_STATUS, type PaginationInput, type Poem, STANZA_STATUS, type Stanza, USER_ERRORS, USER_STATUS, type User, userSchema };
+export { CommonGenre, OperationStatus, type PaginationInput, type Poem, PoemStatus, type Stanza, StanzaStatus, USER_ERRORS, type User, UserStatus, userSchema };

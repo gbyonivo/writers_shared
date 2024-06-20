@@ -1,6 +1,7 @@
+import { CommonGenre } from "./genre";
 import { User } from "./user";
 
-export enum STANZA_STATUS {
+export enum StanzaStatus {
   DELETED = "DELETED",
   ACTIVE = "ACTIVE",
 }
@@ -12,8 +13,9 @@ export interface Stanza {
   user?: Partial<User>;
   poemId?: number;
   poemTitle?: string;
+  genre: CommonGenre;
   position?: number;
-  status: STANZA_STATUS;
+  status: StanzaStatus;
   createdAt: string;
   updatedAt: string;
   rating?: number;
@@ -25,5 +27,5 @@ export interface Stanza {
 export interface StanzaWhere {
   userId?: number;
   poemId?: number;
-  status: STANZA_STATUS;
+  status: StanzaStatus;
 }

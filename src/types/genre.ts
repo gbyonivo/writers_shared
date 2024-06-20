@@ -1,4 +1,4 @@
-export enum GENRE {
+export enum PoemGenre {
   ELEGY = "ELEGY",
   HAIKU = "HAIKU",
   FREE_VERSE = "FREE_VERSE",
@@ -20,4 +20,16 @@ export enum GENRE {
   PANTOUM = "PANTOUM",
   PASTORAL = "PASTORAL",
   PROSE = "PROSE",
+}
+
+export enum CommonGenre {
+  THRILLER = "THRILLER",
+  COMEDY = "COMEDY",
+  ROMANCE = "ROMANCE",
+  FICTION = "FICTION",
+  KIDS = "KIDS",
+  HORROR = "HORROR",
+  DRAMA = "DRAMA",
+  FOLKLORE = "FOLKLORE",
+  OTHERS = "OTHERS",
 }

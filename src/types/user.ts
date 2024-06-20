@@ -1,4 +1,4 @@
-export enum USER_STATUS {
+export enum UserStatus {
   ACTIVE = "ACTIVE",
   SUSPENDED = "SUSPENDED",
   DELETED = "DELETED",
@@ -11,7 +11,7 @@ export interface User {
   phone: string;
   email?: string;
   dob: string;
-  status: USER_STATUS;
+  status: UserStatus;
   poemCount?: number;
   stanzaCount?: number;
   createdAt?: string;

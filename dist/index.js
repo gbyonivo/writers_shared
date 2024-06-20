@@ -20,42 +20,57 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
-  OPERATION_STATUS: () => OPERATION_STATUS,
-  POEM_STATUS: () => POEM_STATUS,
-  STANZA_STATUS: () => STANZA_STATUS,
+  CommonGenre: () => CommonGenre,
+  OperationStatus: () => OperationStatus,
+  PoemStatus: () => PoemStatus,
+  StanzaStatus: () => StanzaStatus,
   USER_ERRORS: () => USER_ERRORS,
-  USER_STATUS: () => USER_STATUS,
+  UserStatus: () => UserStatus,
   userSchema: () => userSchema
 });
 module.exports = __toCommonJS(src_exports);
 
 // src/types/poem.ts
-var POEM_STATUS = /* @__PURE__ */ ((POEM_STATUS2) => {
-  POEM_STATUS2["DELETED"] = "DELETED";
-  POEM_STATUS2["ACTIVE"] = "ACTIVE";
-  return POEM_STATUS2;
-})(POEM_STATUS || {});
+var PoemStatus = /* @__PURE__ */ ((PoemStatus2) => {
+  PoemStatus2["DELETED"] = "DELETED";
+  PoemStatus2["ACTIVE"] = "ACTIVE";
+  return PoemStatus2;
+})(PoemStatus || {});
 
 // src/types/operationStatus.ts
-var OPERATION_STATUS = /* @__PURE__ */ ((OPERATION_STATUS2) => {
-  OPERATION_STATUS2["SUCCESS"] = "SUCCESS";
-  return OPERATION_STATUS2;
-})(OPERATION_STATUS || {});
+var OperationStatus = /* @__PURE__ */ ((OperationStatus2) => {
+  OperationStatus2["SUCCESS"] = "SUCCESS";
+  return OperationStatus2;
+})(OperationStatus || {});
 
 // src/types/stanza.ts
-var STANZA_STATUS = /* @__PURE__ */ ((STANZA_STATUS2) => {
-  STANZA_STATUS2["DELETED"] = "DELETED";
-  STANZA_STATUS2["ACTIVE"] = "ACTIVE";
-  return STANZA_STATUS2;
-})(STANZA_STATUS || {});
+var StanzaStatus = /* @__PURE__ */ ((StanzaStatus2) => {
+  StanzaStatus2["DELETED"] = "DELETED";
+  StanzaStatus2["ACTIVE"] = "ACTIVE";
+  return StanzaStatus2;
+})(StanzaStatus || {});
+
+// src/types/genre.ts
+var CommonGenre = /* @__PURE__ */ ((CommonGenre2) => {
+  CommonGenre2["THRILLER"] = "THRILLER";
+  CommonGenre2["COMEDY"] = "COMEDY";
+  CommonGenre2["ROMANCE"] = "ROMANCE";
+  CommonGenre2["FICTION"] = "FICTION";
+  CommonGenre2["KIDS"] = "KIDS";
+  CommonGenre2["HORROR"] = "HORROR";
+  CommonGenre2["DRAMA"] = "DRAMA";
+  CommonGenre2["FOLKLORE"] = "FOLKLORE";
+  CommonGenre2["OTHERS"] = "OTHERS";
+  return CommonGenre2;
+})(CommonGenre || {});
 
 // src/types/user.ts
-var USER_STATUS = /* @__PURE__ */ ((USER_STATUS2) => {
-  USER_STATUS2["ACTIVE"] = "ACTIVE";
-  USER_STATUS2["SUSPENDED"] = "SUSPENDED";
-  USER_STATUS2["DELETED"] = "DELETED";
-  return USER_STATUS2;
-})(USER_STATUS || {});
+var UserStatus = /* @__PURE__ */ ((UserStatus2) => {
+  UserStatus2["ACTIVE"] = "ACTIVE";
+  UserStatus2["SUSPENDED"] = "SUSPENDED";
+  UserStatus2["DELETED"] = "DELETED";
+  return UserStatus2;
+})(UserStatus || {});
 
 // src/validation/userSchema.ts
 var import_yup = require("yup");
@@ -78,10 +93,11 @@ var userSchema = (0, import_yup.object)({
 });
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  OPERATION_STATUS,
-  POEM_STATUS,
-  STANZA_STATUS,
+  CommonGenre,
+  OperationStatus,
+  PoemStatus,
+  StanzaStatus,
   USER_ERRORS,
-  USER_STATUS,
+  UserStatus,
   userSchema
 });

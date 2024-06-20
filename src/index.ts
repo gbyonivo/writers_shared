@@ -1,6 +1,7 @@
-export { POEM_STATUS, Poem } from "./types/poem";
+export { PoemStatus, Poem } from "./types/poem";
 export { PaginationInput } from "./types/pagination";
-export { OPERATION_STATUS } from "./types/operationStatus";
-export { STANZA_STATUS, Stanza } from "./types/stanza";
-export { User, USER_STATUS } from "./types/user";
+export { OperationStatus } from "./types/operationStatus";
+export { StanzaStatus, Stanza } from "./types/stanza";
+export { CommonGenre } from "./types/genre";
+export { User, UserStatus } from "./types/user";
 export { userSchema, USER_ERRORS } from "./validation/userSchema";
