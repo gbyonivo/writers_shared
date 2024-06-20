@@ -1,3 +1,4 @@
+import { CommonGenre } from "./genre";
 import { User } from "./user";
 
 export enum StanzaStatus {
@@ -12,6 +13,7 @@ export interface Stanza {
   user?: Partial<User>;
   poemId?: number;
   poemTitle?: string;
+  genre: CommonGenre;
   position?: number;
   status: StanzaStatus;
   createdAt: string;
