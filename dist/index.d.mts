@@ -1,5 +1,17 @@
 import * as yup from 'yup';
 
+declare enum CommonGenre {
+    THRILLER = "THRILLER",
+    COMEDY = "COMEDY",
+    ROMANCE = "ROMANCE",
+    FICTION = "FICTION",
+    KIDS = "KIDS",
+    HORROR = "HORROR",
+    DRAMA = "DRAMA",
+    FOLKLORE = "FOLKLORE",
+    OTHERS = "OTHERS"
+}
+
 declare enum UserStatus {
     ACTIVE = "ACTIVE",
     SUSPENDED = "SUSPENDED",
@@ -30,6 +42,7 @@ interface Stanza {
     user?: Partial<User>;
     poemId?: number;
     poemTitle?: string;
+    genre: CommonGenre;
     position?: number;
     status: StanzaStatus;
     createdAt: string;
@@ -50,6 +63,7 @@ interface Poem {
     userId: number;
     stanzaLength?: number;
     status: PoemStatus;
+    genre: CommonGenre;
     createdAt: string;
     updatedAt: string;
     user?: Partial<User>;
@@ -70,18 +84,6 @@ interface PaginationInput {
 
 declare enum OperationStatus {
     SUCCESS = "SUCCESS"
-}
-
-declare enum CommonGenre {
-    THRILLER = "THRILLER",
-    COMEDY = "COMEDY",
-    ROMANCE = "ROMANCE",
-    FICTION = "FICTION",
-    KIDS = "KIDS",
-    HORROR = "HORROR",
-    DRAMA = "DRAMA",
-    FOLKLORE = "FOLKLORE",
-    OTHERS = "OTHERS"
 }
 
 declare const USER_ERRORS: {
