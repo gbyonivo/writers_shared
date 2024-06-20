@@ -1,3 +1,3 @@
-export enum OPERATION_STATUS {
+export enum OperationStatus {
   SUCCESS = "SUCCESS",
 }

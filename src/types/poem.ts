@@ -1,7 +1,7 @@
 import { Stanza } from "./stanza";
 import { User } from "./user";
 
-export enum POEM_STATUS {
+export enum PoemStatus {
   DELETED = "DELETED",
   ACTIVE = "ACTIVE",
 }
@@ -11,7 +11,7 @@ export interface Poem {
   title: string;
   userId: number;
   stanzaLength?: number;
-  status: POEM_STATUS;
+  status: PoemStatus;
   createdAt: string;
   updatedAt: string;
   user?: Partial<User>;

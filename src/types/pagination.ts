@@ -4,4 +4,5 @@ export interface PaginationInput {
   after: string;
   userId: number;
   peomId: number;
+  searchValue: string;
 }
