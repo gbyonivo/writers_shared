@@ -53,6 +53,11 @@ interface Stanza {
     stanzaId?: number;
 }
 
+declare enum Type {
+    POEM = "POEM",
+    STORY = "STORY"
+}
+
 declare enum PoemStatus {
     DELETED = "DELETED",
     ACTIVE = "ACTIVE"
@@ -64,6 +69,7 @@ interface Poem {
     stanzaLength?: number;
     status: PoemStatus;
     genre: CommonGenre;
+    type: Type;
     createdAt: string;
     updatedAt: string;
     user?: Partial<User>;

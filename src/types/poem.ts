@@ -1,5 +1,6 @@
 import { CommonGenre } from "./genre";
 import { Stanza } from "./stanza";
+import { Type } from "./type";
 import { User } from "./user";
 
 export enum PoemStatus {
@@ -14,6 +15,7 @@ export interface Poem {
   stanzaLength?: number;
   status: PoemStatus;
   genre: CommonGenre;
+  type: Type;
   createdAt: string;
   updatedAt: string;
   user?: Partial<User>;
