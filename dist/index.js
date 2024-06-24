@@ -24,6 +24,7 @@ __export(src_exports, {
   OperationStatus: () => OperationStatus,
   PoemStatus: () => PoemStatus,
   StanzaStatus: () => StanzaStatus,
+  Type: () => Type,
   USER_ERRORS: () => USER_ERRORS,
   UserStatus: () => UserStatus,
   userSchema: () => userSchema
@@ -64,6 +65,13 @@ var CommonGenre = /* @__PURE__ */ ((CommonGenre2) => {
   return CommonGenre2;
 })(CommonGenre || {});
 
+// src/types/type.ts
+var Type = /* @__PURE__ */ ((Type2) => {
+  Type2["POEM"] = "POEM";
+  Type2["STORY"] = "STORY";
+  return Type2;
+})(Type || {});
+
 // src/types/user.ts
 var UserStatus = /* @__PURE__ */ ((UserStatus2) => {
   UserStatus2["ACTIVE"] = "ACTIVE";
@@ -97,6 +105,7 @@ var userSchema = (0, import_yup.object)({
   OperationStatus,
   PoemStatus,
   StanzaStatus,
+  Type,
   USER_ERRORS,
   UserStatus,
   userSchema

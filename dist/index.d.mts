@@ -115,4 +115,4 @@ declare const userSchema: yup.ObjectSchema<{
     dob: undefined;
 }, "">;
 
-export { CommonGenre, OperationStatus, type PaginationInput, type Poem, PoemStatus, type Stanza, StanzaStatus, USER_ERRORS, type User, UserStatus, userSchema };
+export { CommonGenre, OperationStatus, type PaginationInput, type Poem, PoemStatus, type Stanza, StanzaStatus, Type, USER_ERRORS, type User, UserStatus, userSchema };
