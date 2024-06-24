@@ -1,5 +1,10 @@
 import * as yup from 'yup';
 
+declare enum PoemType {
+    POEM = "POEM",
+    STORY = "STORY"
+}
+
 declare enum CommonGenre {
     THRILLER = "THRILLER",
     COMEDY = "COMEDY",
@@ -53,11 +58,6 @@ interface Stanza {
     stanzaId?: number;
 }
 
-declare enum Type {
-    POEM = "POEM",
-    STORY = "STORY"
-}
-
 declare enum PoemStatus {
     DELETED = "DELETED",
     ACTIVE = "ACTIVE"
@@ -69,7 +69,7 @@ interface Poem {
     stanzaLength?: number;
     status: PoemStatus;
     genre: CommonGenre;
-    type: Type;
+    type: PoemType;
     createdAt: string;
     updatedAt: string;
     user?: Partial<User>;
@@ -115,4 +115,4 @@ declare const userSchema: yup.ObjectSchema<{
     dob: undefined;
 }, "">;
 
-export { CommonGenre, OperationStatus, type PaginationInput, type Poem, PoemStatus, type Stanza, StanzaStatus, Type, USER_ERRORS, type User, UserStatus, userSchema };
+export { CommonGenre, OperationStatus, type PaginationInput, type Poem, PoemStatus, PoemType, type Stanza, StanzaStatus, USER_ERRORS, type User, UserStatus, userSchema };

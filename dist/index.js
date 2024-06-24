@@ -23,13 +23,20 @@ __export(src_exports, {
   CommonGenre: () => CommonGenre,
   OperationStatus: () => OperationStatus,
   PoemStatus: () => PoemStatus,
+  PoemType: () => PoemType,
   StanzaStatus: () => StanzaStatus,
-  Type: () => Type,
   USER_ERRORS: () => USER_ERRORS,
   UserStatus: () => UserStatus,
   userSchema: () => userSchema
 });
 module.exports = __toCommonJS(src_exports);
+
+// src/types/poem-type.ts
+var PoemType = /* @__PURE__ */ ((PoemType2) => {
+  PoemType2["POEM"] = "POEM";
+  PoemType2["STORY"] = "STORY";
+  return PoemType2;
+})(PoemType || {});
 
 // src/types/poem.ts
 var PoemStatus = /* @__PURE__ */ ((PoemStatus2) => {
@@ -65,13 +72,6 @@ var CommonGenre = /* @__PURE__ */ ((CommonGenre2) => {
   return CommonGenre2;
 })(CommonGenre || {});
 
-// src/types/type.ts
-var Type = /* @__PURE__ */ ((Type2) => {
-  Type2["POEM"] = "POEM";
-  Type2["STORY"] = "STORY";
-  return Type2;
-})(Type || {});
-
 // src/types/user.ts
 var UserStatus = /* @__PURE__ */ ((UserStatus2) => {
   UserStatus2["ACTIVE"] = "ACTIVE";
@@ -104,8 +104,8 @@ var userSchema = (0, import_yup.object)({
   CommonGenre,
   OperationStatus,
   PoemStatus,
+  PoemType,
   StanzaStatus,
-  Type,
   USER_ERRORS,
   UserStatus,
   userSchema
