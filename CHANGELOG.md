@@ -1,5 +1,18 @@
 # writers_shared
 
+## 1.1.17
+
+### Patch Changes
+
+- c5e2b5a: adding rating to stanza and likes to poem
+- e9cf227: add hasBeenLiked and avg rating
+- 1ba5989: changes and bump
+- c074c7f: use npm
+- 0274c8e: changes
+- 0b66536: Add stanzaId to Stanza
+- f021ad7: add genre
+- 0afec1e: numberOfRatings to stanza
+
 ## 1.1.8
 
 ### Patch Changes
