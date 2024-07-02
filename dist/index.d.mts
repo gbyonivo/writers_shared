@@ -76,6 +76,7 @@ interface Piece {
     firstPart?: Partial<Part>;
     likes?: number;
     hasBeenLiked?: boolean;
+    genre: CommonGenre[];
 }
 
 interface PaginationInput {
