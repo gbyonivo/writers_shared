@@ -1,31 +1,31 @@
 import { CommonGenre } from "./genre";
 import { User } from "./user";
 
-export enum StanzaStatus {
+export enum PartStatus {
   DELETED = "DELETED",
   ACTIVE = "ACTIVE",
 }
 
-export interface Stanza {
+export interface Part {
   id?: number;
   content: string;
   userId: number;
   user?: Partial<User>;
-  poemId?: number;
-  poemTitle?: string;
+  pieceId?: number;
+  pieceTitle?: string;
   genre: CommonGenre;
   position?: number;
-  status: StanzaStatus;
+  status: PartStatus;
   createdAt: string;
   updatedAt: string;
   rating?: number;
   userRating?: number;
   numberOfRatings?: number;
-  stanzaId?: number;
+  partId?: number;
 }
 
-export interface StanzaWhere {
+export interface PartWhere {
   userId?: number;
-  poemId?: number;
-  status: StanzaStatus;
+  pieceId?: number;
+  status: PartStatus;
 }

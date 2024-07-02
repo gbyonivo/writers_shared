@@ -3,6 +3,6 @@ export interface PaginationInput {
   before: string;
   after: string;
   userId: number;
-  peomId: number;
+  pieceId: number;
   searchValue: string;
 }

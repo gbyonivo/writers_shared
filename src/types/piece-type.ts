@@ -1,4 +1,4 @@
-export enum PoemType {
+export enum PieceType {
   POEM = "POEM",
   STORY = "STORY",
 }

@@ -1,4 +1,4 @@
-export enum PoemGenre {
+export enum PieceGenre {
   ELEGY = "ELEGY",
   HAIKU = "HAIKU",
   FREE_VERSE = "FREE_VERSE",

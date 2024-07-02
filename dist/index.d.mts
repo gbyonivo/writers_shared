@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-declare enum PoemType {
+declare enum PieceType {
     POEM = "POEM",
     STORY = "STORY"
 }
@@ -30,51 +30,50 @@ interface User {
     email?: string;
     dob: string;
     status: UserStatus;
-    poemCount?: number;
-    stanzaCount?: number;
+    pieceCount?: number;
+    partCount?: number;
     createdAt?: string;
     updatedAt?: string;
 }
 
-declare enum StanzaStatus {
+declare enum PartStatus {
     DELETED = "DELETED",
     ACTIVE = "ACTIVE"
 }
-interface Stanza {
+interface Part {
     id?: number;
     content: string;
     userId: number;
     user?: Partial<User>;
-    poemId?: number;
-    poemTitle?: string;
+    pieceId?: number;
+    pieceTitle?: string;
     genre: CommonGenre;
     position?: number;
-    status: StanzaStatus;
+    status: PartStatus;
     createdAt: string;
     updatedAt: string;
     rating?: number;
     userRating?: number;
     numberOfRatings?: number;
-    stanzaId?: number;
+    partId?: number;
 }
 
-declare enum PoemStatus {
+declare enum PieceStatus {
     DELETED = "DELETED",
     ACTIVE = "ACTIVE"
 }
-interface Poem {
+interface Piece {
     id?: number;
     title: string;
     userId: number;
-    stanzaLength?: number;
-    status: PoemStatus;
-    genre: CommonGenre;
-    type: PoemType;
+    partLength?: number;
+    status: PieceStatus;
+    type: PieceType;
     createdAt: string;
     updatedAt: string;
     user?: Partial<User>;
-    stanzaCount?: number;
-    firstStanza?: Partial<Stanza>;
+    partCount?: number;
+    firstPart?: Partial<Part>;
     likes?: number;
     hasBeenLiked?: boolean;
 }
@@ -84,12 +83,14 @@ interface PaginationInput {
     before: string;
     after: string;
     userId: number;
-    peomId: number;
+    pieceId: number;
     searchValue: string;
 }
 
 declare enum OperationStatus {
-    SUCCESS = "SUCCESS"
+    SUCCESS = "SUCCESS",
+    FAILED = "FAILED",
+    PENDING = "PENDING"
 }
 
 declare const USER_ERRORS: {
@@ -115,4 +116,4 @@ declare const userSchema: yup.ObjectSchema<{
     dob: undefined;
 }, "">;
 
-export { CommonGenre, OperationStatus, type PaginationInput, type Poem, PoemStatus, PoemType, type Stanza, StanzaStatus, USER_ERRORS, type User, UserStatus, userSchema };
+export { CommonGenre, OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, USER_ERRORS, type User, UserStatus, userSchema };

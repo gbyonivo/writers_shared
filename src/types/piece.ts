@@ -1,26 +1,25 @@
 import { CommonGenre } from "./genre";
-import { Stanza } from "./stanza";
-import { PoemType } from "./poem-type";
+import { Part } from "./part";
+import { PieceType } from "./piece-type";
 import { User } from "./user";
 
-export enum PoemStatus {
+export enum PieceStatus {
   DELETED = "DELETED",
   ACTIVE = "ACTIVE",
 }
 
-export interface Poem {
+export interface Piece {
   id?: number;
   title: string;
   userId: number;
-  stanzaLength?: number;
-  status: PoemStatus;
-  genre: CommonGenre;
-  type: PoemType;
+  partLength?: number;
+  status: PieceStatus;
+  type: PieceType;
   createdAt: string;
   updatedAt: string;
   user?: Partial<User>;
-  stanzaCount?: number;
-  firstStanza?: Partial<Stanza>;
+  partCount?: number;
+  firstPart?: Partial<Part>;
   likes?: number;
   hasBeenLiked?: boolean;
 }

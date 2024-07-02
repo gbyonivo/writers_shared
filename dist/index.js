@@ -22,41 +22,43 @@ var src_exports = {};
 __export(src_exports, {
   CommonGenre: () => CommonGenre,
   OperationStatus: () => OperationStatus,
-  PoemStatus: () => PoemStatus,
-  PoemType: () => PoemType,
-  StanzaStatus: () => StanzaStatus,
+  PartStatus: () => PartStatus,
+  PieceStatus: () => PieceStatus,
+  PieceType: () => PieceType,
   USER_ERRORS: () => USER_ERRORS,
   UserStatus: () => UserStatus,
   userSchema: () => userSchema
 });
 module.exports = __toCommonJS(src_exports);
 
-// src/types/poem-type.ts
-var PoemType = /* @__PURE__ */ ((PoemType2) => {
-  PoemType2["POEM"] = "POEM";
-  PoemType2["STORY"] = "STORY";
-  return PoemType2;
-})(PoemType || {});
+// src/types/piece-type.ts
+var PieceType = /* @__PURE__ */ ((PieceType2) => {
+  PieceType2["POEM"] = "POEM";
+  PieceType2["STORY"] = "STORY";
+  return PieceType2;
+})(PieceType || {});
 
-// src/types/poem.ts
-var PoemStatus = /* @__PURE__ */ ((PoemStatus2) => {
-  PoemStatus2["DELETED"] = "DELETED";
-  PoemStatus2["ACTIVE"] = "ACTIVE";
-  return PoemStatus2;
-})(PoemStatus || {});
+// src/types/piece.ts
+var PieceStatus = /* @__PURE__ */ ((PieceStatus2) => {
+  PieceStatus2["DELETED"] = "DELETED";
+  PieceStatus2["ACTIVE"] = "ACTIVE";
+  return PieceStatus2;
+})(PieceStatus || {});
 
 // src/types/operationStatus.ts
 var OperationStatus = /* @__PURE__ */ ((OperationStatus2) => {
   OperationStatus2["SUCCESS"] = "SUCCESS";
+  OperationStatus2["FAILED"] = "FAILED";
+  OperationStatus2["PENDING"] = "PENDING";
   return OperationStatus2;
 })(OperationStatus || {});
 
-// src/types/stanza.ts
-var StanzaStatus = /* @__PURE__ */ ((StanzaStatus2) => {
-  StanzaStatus2["DELETED"] = "DELETED";
-  StanzaStatus2["ACTIVE"] = "ACTIVE";
-  return StanzaStatus2;
-})(StanzaStatus || {});
+// src/types/part.ts
+var PartStatus = /* @__PURE__ */ ((PartStatus2) => {
+  PartStatus2["DELETED"] = "DELETED";
+  PartStatus2["ACTIVE"] = "ACTIVE";
+  return PartStatus2;
+})(PartStatus || {});
 
 // src/types/genre.ts
 var CommonGenre = /* @__PURE__ */ ((CommonGenre2) => {
@@ -103,9 +105,9 @@ var userSchema = (0, import_yup.object)({
 0 && (module.exports = {
   CommonGenre,
   OperationStatus,
-  PoemStatus,
-  PoemType,
-  StanzaStatus,
+  PartStatus,
+  PieceStatus,
+  PieceType,
   USER_ERRORS,
   UserStatus,
   userSchema

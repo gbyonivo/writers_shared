@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- c9b28c9: add firstStanza to poem
+- c9b28c9: add firstPart to piece
 
 ## 1.1.7
 
