@@ -5,18 +5,6 @@ declare enum PieceType {
     STORY = "STORY"
 }
 
-declare enum CommonGenre {
-    THRILLER = "THRILLER",
-    COMEDY = "COMEDY",
-    ROMANCE = "ROMANCE",
-    FICTION = "FICTION",
-    KIDS = "KIDS",
-    HORROR = "HORROR",
-    DRAMA = "DRAMA",
-    FOLKLORE = "FOLKLORE",
-    OTHERS = "OTHERS"
-}
-
 declare enum UserStatus {
     ACTIVE = "ACTIVE",
     SUSPENDED = "SUSPENDED",
@@ -47,7 +35,7 @@ interface Part {
     user?: Partial<User>;
     pieceId?: number;
     pieceTitle?: string;
-    genre: CommonGenre;
+    genres: number[];
     position?: number;
     status: PartStatus;
     createdAt: string;
@@ -76,7 +64,7 @@ interface Piece {
     firstPart?: Partial<Part>;
     likes?: number;
     hasBeenLiked?: boolean;
-    genre: CommonGenre[];
+    genres: number[];
 }
 
 interface PaginationInput {
@@ -117,4 +105,4 @@ declare const userSchema: yup.ObjectSchema<{
     dob: undefined;
 }, "">;
 
-export { CommonGenre, OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, USER_ERRORS, type User, UserStatus, userSchema };
+export { OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, USER_ERRORS, type User, UserStatus, userSchema };

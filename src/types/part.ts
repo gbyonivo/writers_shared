@@ -1,4 +1,3 @@
-import { CommonGenre } from "./genre";
 import { User } from "./user";
 
 export enum PartStatus {
@@ -13,7 +12,7 @@ export interface Part {
   user?: Partial<User>;
   pieceId?: number;
   pieceTitle?: string;
-  genre: CommonGenre;
+  genres: number[];
   position?: number;
   status: PartStatus;
   createdAt: string;

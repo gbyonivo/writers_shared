@@ -20,7 +20,6 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
-  CommonGenre: () => CommonGenre,
   OperationStatus: () => OperationStatus,
   PartStatus: () => PartStatus,
   PieceStatus: () => PieceStatus,
@@ -60,20 +59,6 @@ var PartStatus = /* @__PURE__ */ ((PartStatus2) => {
   return PartStatus2;
 })(PartStatus || {});
 
-// src/types/genre.ts
-var CommonGenre = /* @__PURE__ */ ((CommonGenre2) => {
-  CommonGenre2["THRILLER"] = "THRILLER";
-  CommonGenre2["COMEDY"] = "COMEDY";
-  CommonGenre2["ROMANCE"] = "ROMANCE";
-  CommonGenre2["FICTION"] = "FICTION";
-  CommonGenre2["KIDS"] = "KIDS";
-  CommonGenre2["HORROR"] = "HORROR";
-  CommonGenre2["DRAMA"] = "DRAMA";
-  CommonGenre2["FOLKLORE"] = "FOLKLORE";
-  CommonGenre2["OTHERS"] = "OTHERS";
-  return CommonGenre2;
-})(CommonGenre || {});
-
 // src/types/user.ts
 var UserStatus = /* @__PURE__ */ ((UserStatus2) => {
   UserStatus2["ACTIVE"] = "ACTIVE";
@@ -103,7 +88,6 @@ var userSchema = (0, import_yup.object)({
 });
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  CommonGenre,
   OperationStatus,
   PartStatus,
   PieceStatus,

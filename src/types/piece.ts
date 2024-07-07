@@ -1,4 +1,3 @@
-import { CommonGenre } from "./genre";
 import { Part } from "./part";
 import { PieceType } from "./piece-type";
 import { User } from "./user";
@@ -22,5 +21,5 @@ export interface Piece {
   firstPart?: Partial<Part>;
   likes?: number;
   hasBeenLiked?: boolean;
-  genre: CommonGenre[];
+  genres: number[];
 }

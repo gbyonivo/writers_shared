@@ -27,20 +27,6 @@ var PartStatus = /* @__PURE__ */ ((PartStatus2) => {
   return PartStatus2;
 })(PartStatus || {});
 
-// src/types/genre.ts
-var CommonGenre = /* @__PURE__ */ ((CommonGenre2) => {
-  CommonGenre2["THRILLER"] = "THRILLER";
-  CommonGenre2["COMEDY"] = "COMEDY";
-  CommonGenre2["ROMANCE"] = "ROMANCE";
-  CommonGenre2["FICTION"] = "FICTION";
-  CommonGenre2["KIDS"] = "KIDS";
-  CommonGenre2["HORROR"] = "HORROR";
-  CommonGenre2["DRAMA"] = "DRAMA";
-  CommonGenre2["FOLKLORE"] = "FOLKLORE";
-  CommonGenre2["OTHERS"] = "OTHERS";
-  return CommonGenre2;
-})(CommonGenre || {});
-
 // src/types/user.ts
 var UserStatus = /* @__PURE__ */ ((UserStatus2) => {
   UserStatus2["ACTIVE"] = "ACTIVE";
@@ -69,7 +55,6 @@ var userSchema = object({
   dob: date().required(USER_ERRORS.dobRequired).max(/* @__PURE__ */ new Date(), USER_ERRORS.dobMax)
 });
 export {
-  CommonGenre,
   OperationStatus,
   PartStatus,
   PieceStatus,
