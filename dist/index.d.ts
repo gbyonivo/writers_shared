@@ -35,7 +35,7 @@ interface Part {
     user?: Partial<User>;
     pieceId?: number;
     pieceTitle?: string;
-    genres: number[];
+    genreIds: number[];
     position?: number;
     status: PartStatus;
     createdAt: string;
@@ -54,17 +54,17 @@ interface Piece {
     id?: number;
     title: string;
     userId: number;
-    partLength?: number;
     status: PieceStatus;
     type: PieceType;
     createdAt: string;
     updatedAt: string;
-    user?: Partial<User>;
     partCount?: number;
-    firstPart?: Partial<Part>;
     likes?: number;
     hasBeenLiked?: boolean;
-    genres: number[];
+    firstPartId?: number;
+    genreIds: number[];
+    firstPart?: Partial<Part>;
+    user?: Partial<User>;
 }
 
 interface PaginationInput {

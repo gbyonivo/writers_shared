@@ -12,7 +12,7 @@ export interface Part {
   user?: Partial<User>;
   pieceId?: number;
   pieceTitle?: string;
-  genres: number[];
+  genreIds: number[];
   position?: number;
   status: PartStatus;
   createdAt: string;
