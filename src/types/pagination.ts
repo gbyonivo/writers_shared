@@ -5,4 +5,5 @@ export interface PaginationInput {
   userId: number;
   pieceId: number;
   searchValue: string;
+  type: string;
 }

@@ -22,9 +22,3 @@ export interface Part {
   numberOfRatings?: number;
   partId?: number;
 }
-
-export interface PartWhere {
-  userId?: number;
-  pieceId?: number;
-  status: PartStatus;
-}
