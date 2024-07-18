@@ -106,4 +106,13 @@ declare const userSchema: yup.ObjectSchema<{
     dob: undefined;
 }, "">;
 
-export { OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, USER_ERRORS, type User, UserStatus, userSchema };
+interface Bookmark {
+    id: number;
+    name: string;
+    userId: number;
+    poemId: number;
+    createdAt: string;
+    updatedAt: string;
+}
+
+export { type Bookmark, OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, USER_ERRORS, type User, UserStatus, userSchema };

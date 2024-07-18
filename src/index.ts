@@ -5,3 +5,4 @@ export { OperationStatus } from "./types/operationStatus";
 export { PartStatus, Part } from "./types/part";
 export { User, UserStatus } from "./types/user";
 export { userSchema, USER_ERRORS } from "./validation/userSchema";
+export { Bookmark } from "./types/bookmark";
