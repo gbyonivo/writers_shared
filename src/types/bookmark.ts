@@ -4,6 +4,7 @@ export interface Bookmark {
   userId: number;
   pieceId: number;
   partIds: number[];
+  locked: boolean;
   createdAt: string;
   updatedAt: string;
 }
