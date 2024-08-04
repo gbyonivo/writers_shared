@@ -21,4 +21,7 @@ export interface Part {
   userRating?: number;
   numberOfRatings?: number;
   partId?: number;
+  identifier?: string;
+  rate?: number;
+  pitch?: number;
 }
