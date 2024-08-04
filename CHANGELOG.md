@@ -1,5 +1,27 @@
 # writers_shared
 
+## 1.1.26
+
+### Patch Changes
+
+- 29487f9: poemId to pieceId
+- 47e99a5: Change genres to genreIds
+- c5e2b5a: adding rating to stanza and likes to poem
+- 284d454: Add identifier pitch and rate
+- b15a935: add locked to bookmark
+- e9cf227: add hasBeenLiked and avg rating
+- 1ba5989: changes and bump
+- 69be7fe: ADd type to paginationInupt
+- c074c7f: use npm
+- ed0b054: change poem to piece
+- 0274c8e: changes
+- 0b66536: Add stanzaId to Stanza
+- 1106249: Add bookmark
+- b2ad09a: change genres number
+- f021ad7: add genre
+- 5dc31fc: add genres to piece
+- 0afec1e: numberOfRatings to stanza
+
 ## 1.1.8
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "writers_shared",
-  "version": "1.1.25",
+  "version": "1.1.26",
   "description": "Shared library between shared_be and shared_fe",
   "main": "index.js",
   "module": "dist/index.mjs",
