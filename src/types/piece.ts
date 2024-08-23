@@ -15,6 +15,7 @@ export interface Piece {
   type: PieceType;
   createdAt: string;
   updatedAt: string;
+  imageUrl: string;
   partCount?: number;
   likes?: number;
   hasBeenLiked?: boolean;
@@ -22,4 +23,5 @@ export interface Piece {
   genreIds: number[];
   firstPart?: Partial<Part>;
   user?: Partial<User>;
+  maxAge: number;
 }

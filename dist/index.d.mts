@@ -61,6 +61,7 @@ interface Piece {
     type: PieceType;
     createdAt: string;
     updatedAt: string;
+    imageUrl: string;
     partCount?: number;
     likes?: number;
     hasBeenLiked?: boolean;
@@ -68,6 +69,7 @@ interface Piece {
     genreIds: number[];
     firstPart?: Partial<Part>;
     user?: Partial<User>;
+    maxAge: number;
 }
 
 interface PaginationInput {
