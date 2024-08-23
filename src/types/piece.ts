@@ -23,5 +23,5 @@ export interface Piece {
   genreIds: number[];
   firstPart?: Partial<Part>;
   user?: Partial<User>;
-  maxAge: number;
+  minAge: number;
 }
