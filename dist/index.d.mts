@@ -28,7 +28,31 @@ declare enum PartStatus {
     DELETED = "DELETED",
     ACTIVE = "ACTIVE"
 }
-interface Part {
+declare enum SpeakerStyle {
+    cheerful = "cheerful",
+    sad = "sad",
+    angry = "angry",
+    excited = "excited",
+    friendly = "friendly",
+    terrified = "terrified",
+    shouting = "shouting",
+    unfriendly = "unfriendly",
+    whispering = "whispering",
+    hopeful = "hopeful"
+}
+interface SpeakerSetting {
+    speakerPitchPercentage?: number;
+    speakerRatePercentage?: number;
+    speakerStyle?: SpeakerStyle;
+    speakerName?: string;
+    speakerPreBreakTime?: number;
+    speakerPostBreakTime?: number;
+    naratorPostContent?: string;
+    naratorPreContent?: string;
+    naratorPreBreakTime?: number;
+    naratorPostBreakTime?: number;
+}
+interface Part extends SpeakerSetting {
     id?: number;
     content: string;
     userId: number;
@@ -44,9 +68,6 @@ interface Part {
     userRating?: number;
     numberOfRatings?: number;
     partId?: number;
-    identifier?: string;
-    rate?: number;
-    pitch?: number;
 }
 
 declare enum PieceStatus {

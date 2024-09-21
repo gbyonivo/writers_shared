@@ -5,7 +5,37 @@ export enum PartStatus {
   ACTIVE = "ACTIVE",
 }
 
-export interface Part {
+export enum SpeakerName {
+  "en-US-AriaNeural" = "en-US-AriaNeural",
+}
+
+export enum SpeakerStyle {
+  cheerful = "cheerful",
+  sad = "sad",
+  angry = "angry",
+  excited = "excited",
+  friendly = "friendly",
+  terrified = "terrified",
+  shouting = "shouting",
+  unfriendly = "unfriendly",
+  whispering = "whispering",
+  hopeful = "hopeful",
+}
+
+export interface SpeakerSetting {
+  speakerPitchPercentage?: number;
+  speakerRatePercentage?: number;
+  speakerStyle?: SpeakerStyle;
+  speakerName?: string;
+  speakerPreBreakTime?: number;
+  speakerPostBreakTime?: number;
+  naratorPostContent?: string;
+  naratorPreContent?: string;
+  naratorPreBreakTime?: number;
+  naratorPostBreakTime?: number;
+}
+
+export interface Part extends SpeakerSetting {
   id?: number;
   content: string;
   userId: number;
@@ -21,7 +51,4 @@ export interface Part {
   userRating?: number;
   numberOfRatings?: number;
   partId?: number;
-  identifier?: string;
-  rate?: number;
-  pitch?: number;
 }
