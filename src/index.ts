@@ -6,3 +6,11 @@ export { PartStatus, Part } from "./types/part";
 export { User, UserStatus } from "./types/user";
 export { userSchema, USER_ERRORS } from "./validation/userSchema";
 export { Bookmark } from "./types/bookmark";
+export { SpeakerStyle } from "./types/speaker-style";
+export {
+  SpeakerName,
+  Sex,
+  SpeakerCountry,
+  SpeakerNamesByCountryAndSex,
+  Country,
+} from "./types/speaker-names";

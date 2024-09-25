@@ -20,10 +20,16 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
+  Country: () => Country,
   OperationStatus: () => OperationStatus,
   PartStatus: () => PartStatus,
   PieceStatus: () => PieceStatus,
   PieceType: () => PieceType,
+  Sex: () => Sex,
+  SpeakerCountry: () => SpeakerCountry,
+  SpeakerName: () => SpeakerName,
+  SpeakerNamesByCountryAndSex: () => SpeakerNamesByCountryAndSex,
+  SpeakerStyle: () => SpeakerStyle,
   USER_ERRORS: () => USER_ERRORS,
   UserStatus: () => UserStatus,
   userSchema: () => userSchema
@@ -86,12 +92,138 @@ var userSchema = (0, import_yup.object)({
   // add dob to be only date
   dob: (0, import_yup.date)().required(USER_ERRORS.dobRequired).max(/* @__PURE__ */ new Date(), USER_ERRORS.dobMax)
 });
+
+// src/types/speaker-style.ts
+var SpeakerStyle = /* @__PURE__ */ ((SpeakerStyle2) => {
+  SpeakerStyle2["advertisement_upbeat"] = "advertisement_upbeat";
+  SpeakerStyle2["affectionate"] = "affectionate";
+  SpeakerStyle2["angry"] = "angry";
+  SpeakerStyle2["assistant"] = "assistant";
+  SpeakerStyle2["calm"] = "calm";
+  SpeakerStyle2["chat"] = "chat";
+  SpeakerStyle2["cheerful"] = "cheerful";
+  SpeakerStyle2["customerservice"] = "customerservice";
+  SpeakerStyle2["depressed"] = "depressed";
+  SpeakerStyle2["disgruntled"] = "disgruntled";
+  SpeakerStyle2["documentary-narration"] = "documentary-narration";
+  SpeakerStyle2["embarrassed"] = "embarrassed";
+  SpeakerStyle2["empathetic"] = "empathetic";
+  SpeakerStyle2["envious"] = "envious";
+  SpeakerStyle2["excited"] = "excited";
+  SpeakerStyle2["fearful"] = "fearful";
+  SpeakerStyle2["friendly"] = "friendly";
+  SpeakerStyle2["gentle"] = "gentle";
+  SpeakerStyle2["hopeful"] = "hopeful";
+  SpeakerStyle2["lyrical"] = "lyrical";
+  SpeakerStyle2["narration-professional"] = "narration-professional";
+  SpeakerStyle2["narration-relaxed"] = "narration-relaxed";
+  SpeakerStyle2["newscast"] = "newscast";
+  SpeakerStyle2["newscast-casual"] = "newscast-casual";
+  SpeakerStyle2["newscast-formal"] = "newscast-formal";
+  SpeakerStyle2["poetry-reading"] = "poetry-reading";
+  SpeakerStyle2["sad"] = "sad";
+  SpeakerStyle2["serious"] = "serious";
+  SpeakerStyle2["shouting"] = "shouting";
+  SpeakerStyle2["sports_commentary"] = "sports_commentary";
+  SpeakerStyle2["sports_commentary_excited"] = "sports_commentary_excited";
+  SpeakerStyle2["whispering"] = "whispering";
+  SpeakerStyle2["terrified"] = "terrified";
+  SpeakerStyle2["unfriendly"] = "unfriendly";
+  return SpeakerStyle2;
+})(SpeakerStyle || {});
+
+// src/types/speaker-names.ts
+var Country = /* @__PURE__ */ ((Country2) => {
+  Country2["US"] = "US";
+  Country2["AU"] = "AU";
+  Country2["NG"] = "NG";
+  Country2["IN"] = "IN";
+  Country2["CA"] = "CA";
+  Country2["UK"] = "UK";
+  Country2["IE"] = "IE";
+  Country2["HK"] = "HK";
+  return Country2;
+})(Country || {});
+var Sex = /* @__PURE__ */ ((Sex2) => {
+  Sex2["MALE"] = "MALE";
+  Sex2["FEMALE"] = "FEMALE";
+  return Sex2;
+})(Sex || {});
+var SpeakerCountry = {
+  AU: "AUSTRALIA",
+  CA: "CANADA",
+  NG: "NIGERIA",
+  IN: "INDIA",
+  UK: "UNITED_KINGDOM",
+  IE: "IRELAND",
+  US: "UNITED_STATES",
+  HK: "HONK_KONG"
+};
+var SpeakerName = /* @__PURE__ */ ((SpeakerName2) => {
+  SpeakerName2["en-US-BrandonNeural"] = "en-US-BrandonNeural";
+  SpeakerName2["en-US-MichelleNeural"] = "en-US-MichelleNeural";
+  SpeakerName2["en-NG-EzinneNeural"] = "en-NG-EzinneNeural";
+  SpeakerName2["en-NG-AbeoNeural"] = "en-NG-AbeoNeural";
+  SpeakerName2["en-HK-YanNeural"] = "en-HK-YanNeural";
+  SpeakerName2["en-HK-SamNeural"] = "en-HK-SamNeural";
+  SpeakerName2["en-GB-ElliotNeural"] = "en-GB-ElliotNeural";
+  SpeakerName2["en-GB-BellaNeural"] = "en-GB-BellaNeural";
+  SpeakerName2["en-CA-ClaraNeural"] = "en-CA-ClaraNeural";
+  SpeakerName2["en-CA-LiamNeural"] = "en-CA-LiamNeural";
+  SpeakerName2["en-IN-AaravNeural"] = "en-IN-AaravNeural";
+  SpeakerName2["en-IN-KavyaNeural"] = "en-IN-KavyaNeural";
+  SpeakerName2["en-IE-EmilyNeural"] = "en-IE-EmilyNeural";
+  SpeakerName2["en-IE-ConnorNeural"] = "en-IE-ConnorNeural";
+  SpeakerName2["en-AU-DarrenNeural"] = "en-AU-DarrenNeural";
+  SpeakerName2["en-AU-CarlyNeural"] = "en-AU-CarlyNeural";
+  return SpeakerName2;
+})(SpeakerName || {});
+var SpeakerNamesByCountryAndSex = {
+  NG: {
+    FEMALE: "en-NG-EzinneNeural" /* en-NG-EzinneNeural */,
+    MALE: "en-NG-AbeoNeural" /* en-NG-AbeoNeural */
+  },
+  AU: {
+    FEMALE: "en-AU-CarlyNeural" /* en-AU-CarlyNeural */,
+    MALE: "en-AU-DarrenNeural" /* en-AU-DarrenNeural */
+  },
+  IE: {
+    FEMALE: "en-IE-EmilyNeural" /* en-IE-EmilyNeural */,
+    MALE: "en-IE-ConnorNeural" /* en-IE-ConnorNeural */
+  },
+  HK: {
+    FEMALE: "en-HK-YanNeural" /* en-HK-YanNeural */,
+    MALE: "en-HK-SamNeural" /* en-HK-SamNeural */
+  },
+  UK: {
+    FEMALE: "en-GB-BellaNeural" /* en-GB-BellaNeural */,
+    MALE: "en-GB-ElliotNeural" /* en-GB-ElliotNeural */
+  },
+  US: {
+    FEMALE: "en-US-MichelleNeural" /* en-US-MichelleNeural */,
+    MALE: "en-US-BrandonNeural" /* en-US-BrandonNeural */
+  },
+  CA: {
+    FEMALE: "en-CA-ClaraNeural" /* en-CA-ClaraNeural */,
+    MALE: "en-CA-LiamNeural" /* en-CA-LiamNeural */
+  },
+  IN: {
+    FEMALE: "en-IN-KavyaNeural" /* en-IN-KavyaNeural */,
+    MALE: "en-IN-AaravNeural" /* en-IN-AaravNeural */
+  }
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  Country,
   OperationStatus,
   PartStatus,
   PieceStatus,
   PieceType,
+  Sex,
+  SpeakerCountry,
+  SpeakerName,
+  SpeakerNamesByCountryAndSex,
+  SpeakerStyle,
   USER_ERRORS,
   UserStatus,
   userSchema

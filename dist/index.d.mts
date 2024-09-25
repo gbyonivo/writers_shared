@@ -28,7 +28,7 @@ declare enum PartStatus {
     DELETED = "DELETED",
     ACTIVE = "ACTIVE"
 }
-declare enum SpeakerStyle {
+declare enum SpeakerStyle$1 {
     cheerful = "cheerful",
     sad = "sad",
     angry = "angry",
@@ -43,7 +43,7 @@ declare enum SpeakerStyle {
 interface SpeakerSetting {
     speakerPitchPercentage?: number;
     speakerRatePercentage?: number;
-    speakerStyle?: SpeakerStyle;
+    speakerStyle?: SpeakerStyle$1;
     speakerName?: string;
     speakerPreBreakTime?: number;
     speakerPostBreakTime?: number;
@@ -143,4 +143,76 @@ interface Bookmark {
     updatedAt: string;
 }
 
-export { type Bookmark, OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, USER_ERRORS, type User, UserStatus, userSchema };
+declare enum SpeakerStyle {
+    advertisement_upbeat = "advertisement_upbeat",
+    affectionate = "affectionate",
+    angry = "angry",
+    assistant = "assistant",
+    calm = "calm",
+    chat = "chat",
+    cheerful = "cheerful",
+    customerservice = "customerservice",
+    depressed = "depressed",
+    disgruntled = "disgruntled",
+    "documentary-narration" = "documentary-narration",
+    embarrassed = "embarrassed",
+    empathetic = "empathetic",
+    envious = "envious",
+    excited = "excited",
+    fearful = "fearful",
+    friendly = "friendly",
+    gentle = "gentle",
+    hopeful = "hopeful",
+    lyrical = "lyrical",
+    "narration-professional" = "narration-professional",
+    "narration-relaxed" = "narration-relaxed",
+    newscast = "newscast",
+    "newscast-casual" = "newscast-casual",
+    "newscast-formal" = "newscast-formal",
+    "poetry-reading" = "poetry-reading",
+    sad = "sad",
+    serious = "serious",
+    shouting = "shouting",
+    sports_commentary = "sports_commentary",
+    sports_commentary_excited = "sports_commentary_excited",
+    whispering = "whispering",
+    terrified = "terrified",
+    unfriendly = "unfriendly"
+}
+
+declare enum Country {
+    US = "US",
+    AU = "AU",
+    NG = "NG",
+    IN = "IN",
+    CA = "CA",
+    UK = "UK",
+    IE = "IE",
+    HK = "HK"
+}
+declare enum Sex {
+    MALE = "MALE",
+    FEMALE = "FEMALE"
+}
+declare const SpeakerCountry: Record<Country, String>;
+declare enum SpeakerName {
+    "en-US-BrandonNeural" = "en-US-BrandonNeural",
+    "en-US-MichelleNeural" = "en-US-MichelleNeural",
+    "en-NG-EzinneNeural" = "en-NG-EzinneNeural",
+    "en-NG-AbeoNeural" = "en-NG-AbeoNeural",
+    "en-HK-YanNeural" = "en-HK-YanNeural",
+    "en-HK-SamNeural" = "en-HK-SamNeural",
+    "en-GB-ElliotNeural" = "en-GB-ElliotNeural",
+    "en-GB-BellaNeural" = "en-GB-BellaNeural",
+    "en-CA-ClaraNeural" = "en-CA-ClaraNeural",
+    "en-CA-LiamNeural" = "en-CA-LiamNeural",
+    "en-IN-AaravNeural" = "en-IN-AaravNeural",
+    "en-IN-KavyaNeural" = "en-IN-KavyaNeural",
+    "en-IE-EmilyNeural" = "en-IE-EmilyNeural",
+    "en-IE-ConnorNeural" = "en-IE-ConnorNeural",
+    "en-AU-DarrenNeural" = "en-AU-DarrenNeural",
+    "en-AU-CarlyNeural" = "en-AU-CarlyNeural"
+}
+declare const SpeakerNamesByCountryAndSex: Record<Country, Record<Sex, SpeakerName>>;
+
+export { type Bookmark, Country, OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, Sex, SpeakerCountry, SpeakerName, SpeakerNamesByCountryAndSex, SpeakerStyle, USER_ERRORS, type User, UserStatus, userSchema };
