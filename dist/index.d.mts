@@ -206,4 +206,4 @@ interface Bookmark {
     updatedAt: string;
 }
 
-export { type Bookmark, Country, OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, Sex, SpeakerCountry, SpeakerName, SpeakerNamesByCountryAndSex, SpeakerStyle, USER_ERRORS, type User, UserStatus, userSchema };
+export { type AgeRating, type Bookmark, Country, OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, Sex, SpeakerCountry, SpeakerName, SpeakerNamesByCountryAndSex, SpeakerStyle, USER_ERRORS, type User, UserStatus, userSchema };
