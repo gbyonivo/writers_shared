@@ -1,32 +1,19 @@
+import { SpeakerName } from "./speaker-names";
+import { SpeakerStyle } from "./speaker-style";
 import { User } from "./user";
+
+export type AgeRating = "U" | "18" | "15" | "12" | "PG";
 
 export enum PartStatus {
   DELETED = "DELETED",
   ACTIVE = "ACTIVE",
 }
 
-export enum SpeakerName {
-  "en-US-AriaNeural" = "en-US-AriaNeural",
-}
-
-export enum SpeakerStyle {
-  cheerful = "cheerful",
-  sad = "sad",
-  angry = "angry",
-  excited = "excited",
-  friendly = "friendly",
-  terrified = "terrified",
-  shouting = "shouting",
-  unfriendly = "unfriendly",
-  whispering = "whispering",
-  hopeful = "hopeful",
-}
-
 export interface SpeakerSetting {
   speakerPitchPercentage?: number;
   speakerRatePercentage?: number;
   speakerStyle?: SpeakerStyle;
-  speakerName?: string;
+  speakerName?: SpeakerName;
   speakerPreBreakTime?: number;
   speakerPostBreakTime?: number;
   naratorPostContent?: string;
@@ -51,4 +38,6 @@ export interface Part extends SpeakerSetting {
   userRating?: number;
   numberOfRatings?: number;
   partId?: number;
+  ageRating?: AgeRating;
+  aiAgeRating?: string;
 }
