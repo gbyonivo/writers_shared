@@ -40,4 +40,5 @@ export interface Part extends SpeakerSetting {
   partId?: number;
   ageRating?: AgeRating;
   aiAgeRating?: string;
+  voiceId?: string;
 }
