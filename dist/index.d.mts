@@ -206,4 +206,15 @@ interface Bookmark {
     updatedAt: string;
 }
 
-export { type AgeRating, type Bookmark, Country, OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, Sex, SpeakerCountry, SpeakerName, SpeakerNamesByCountryAndSex, SpeakerStyle, USER_ERRORS, type User, UserStatus, userSchema };
+interface ElevenVoice {
+    id: string;
+    name: string;
+    previewUrl: string;
+    accent: string;
+    description: string;
+    age: string;
+    gender: string;
+    useCase: string;
+}
+
+export { type AgeRating, type Bookmark, Country, type ElevenVoice, OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, Sex, SpeakerCountry, SpeakerName, SpeakerNamesByCountryAndSex, SpeakerStyle, USER_ERRORS, type User, UserStatus, userSchema };

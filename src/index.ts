@@ -7,6 +7,7 @@ export { User, UserStatus } from "./types/user";
 export { userSchema, USER_ERRORS } from "./validation/userSchema";
 export { Bookmark } from "./types/bookmark";
 export { SpeakerStyle } from "./types/speaker-style";
+export { ElevenVoice } from "./types/voices";
 export {
   SpeakerName,
   Sex,
