@@ -12,7 +12,7 @@ var PieceStatus = /* @__PURE__ */ ((PieceStatus2) => {
   return PieceStatus2;
 })(PieceStatus || {});
 
-// src/types/operationStatus.ts
+// src/types/operation-status.ts
 var OperationStatus = /* @__PURE__ */ ((OperationStatus2) => {
   OperationStatus2["SUCCESS"] = "SUCCESS";
   OperationStatus2["FAILED"] = "FAILED";

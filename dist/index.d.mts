@@ -218,4 +218,29 @@ interface ElevenVoice {
     useCase: string;
 }
 
-export { type AgeRating, type Bookmark, Country, type ElevenVoice, OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, Sex, SpeakerCountry, SpeakerName, SpeakerNamesByCountryAndSex, SpeakerStyle, USER_ERRORS, type User, UserStatus, userSchema };
+interface Video {
+    id: number;
+    createdAt: string;
+    updatedAt: string;
+    url: string;
+    scriptId: number;
+    pieceId: number;
+}
+
+interface Script {
+    id: number;
+    script: string;
+    prompt: string;
+    createdAt: string;
+    updatedAt: string;
+    videoId: number;
+}
+
+interface VideoPart {
+    videoId: number;
+    createdAt: string;
+    updatedAt: string;
+    partId: number;
+}
+
+export { type AgeRating, type Bookmark, Country, type ElevenVoice, OperationStatus, type PaginationInput, type Part, PartStatus, type Piece, PieceStatus, PieceType, type Script, Sex, SpeakerCountry, SpeakerName, SpeakerNamesByCountryAndSex, SpeakerStyle, USER_ERRORS, type User, UserStatus, type Video, type VideoPart, userSchema };
